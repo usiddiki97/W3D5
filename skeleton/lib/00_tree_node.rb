@@ -47,6 +47,6 @@ class PolyTreeNode
     end
 
     def inspect
-        @value
+        { value: @value, parent: @parent, children: @children }
     end
 end

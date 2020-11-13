@@ -80,9 +80,9 @@ class KnightPathFinder
     # When you have completed, and tested, #build_move_tree get a code review from your TA.
 
     def new_move_positions(pos)
-        variable = KnightPathFinder.valid_moves(pos)
-        # debugger if variable == nil
-        variable.reject{|new_pos| considered_positions.include?(new_pos)} 
+        valid_moves = KnightPathFinder.valid_moves(pos)
+        # debugger if valid_moves == nil
+        valid_moves.reject{|new_pos| considered_positions.include?(new_pos)} 
             .each {|new_pos| considered_positions << new_pos}
     end
     
