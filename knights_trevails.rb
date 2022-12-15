@@ -40,9 +40,10 @@ class KnightPathFinder
 # Before we start #build_move_tree, you'll want to be able to find new positions
 # you can move to from a given position. Write a class method KnightPathFinder::valid_moves(pos).
 # There are up to eight possible moves.
-    attr_reader :start_pos, :root_node
-    attr_accessor :considered_positions
+    # attr_reader :start_pos, :root_node
+    # attr_accessor :considered_positions
     MOVES = [[-2,-1],[-2,1],[2,-1],[2,1],[-1,-2],[-1,2],[1,-2],[1,2]]
+
     def self.valid_moves(pos) 
         row, col = pos 
         new_positions = MOVES.map do |move|
